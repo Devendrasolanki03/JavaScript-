@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>hello javascript</title>
+<script type="text/javascript"> 
+ alert("welcome to javascript");
+  // var name = prompt("enter your name");
+  // document.writeln("hello ",name);
+  // var n = confirm("are you sure to continue?");
+  // if(n==true){
+  //     document.writeln("you pressed ok");
+  // }
+  // else{
+  //     document.writeln("you pressed cancel");
+  // }
+// give some basic math operations
+//  var a = parseFloat(prompt("enter first number: ")); 
+//  var b = parseFloat(prompt("enter second number: "));
+//  var sum = a + b;  
+//  var diff = a - b;
+//  var prod = a * b;
+//  var quot = a / b;
+//  var mod = a % b;
+//  document.writeln("Sum: " + sum + "<br>");
+//  document.writeln("Difference: " + diff + "<br>");
+//  document.writeln("Product: " + prod + "<br>");
+//   document.writeln("Quotient: " + quot + "<br>");
+
+// var x = parseInt(prompt("Enter a number: "));
+// if(x % 2 == 0){
+//     document.writeln(x + " is an even number.");
+// }
+// else{
+//     document.writeln(x + " is an odd number.");
+// } 
+
+var E = 5;
+for(var i = 1; i <= E; i++){
+    var pattern = "";
+    for(var j = 1; j <= i; j++){
+        pattern += "*";
+        if(j < i){
+            pattern += " ";
+        }
+        
+    }
+    document.writeln(pattern + "<br>");
+    
+}
+</script>
+</head>
+<body>
