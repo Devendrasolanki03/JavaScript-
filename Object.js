@@ -131,8 +131,71 @@
 // student.display();
 
 
+// var movies = [
+//     {name:"dev",iswatech:true,isHit:true},
+//     {name:"pushpa",iswatech:false,isHit:false}
+// ]
+
+// movies.forEach(function(movie){
+//     result="I"
+//     if (movie.iswatech) {
+//         result = result + " watched ";
+//     } else {
+//         result = result + " not seen "   
+//     }
+//     result = result+movie.name + "  add movies is"
+//     if (movie.isHit) 
+//         {
+//             result = result+ " Hit "        
+//     } else {
+//         result = result+" flop "
+//     }
+//     console.log(result)
+// })
 
 
 
+// var student = new Object();
+// student.id=101;
+// student.name="dev";
+// console.log(student)
+
+// student.name="ravi";
+// console.log(student)
+
+// student.age=30;
+// console.log(student)
 
 
+
+// var student1 = new Object();
+// student1.id=101;
+// student1.name="dev";
+// console.log(student1)
+
+
+// var student2 = new Object();
+// student2.age=11;
+// student2.salary=54444554
+// console.log(student2)
+
+
+// let obj = {...student1,...student2}
+// console.log(obj)
+// console.log(Object.keys(obj))// keys
+// console.log(Object.keys(obj).length) // length of keys
+// console.log(Object.values(obj))// values
+// console.log(Object.entries(obj))
+
+let obj1 = {
+    id:1,
+    name:"dev",
+
+}
+Object.freeze(obj1)
+obj1.age=50;
+console.log(obj1)
+
+
+delete obj1.name
+console.log(obj1)
