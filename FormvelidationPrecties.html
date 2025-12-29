@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Job Portal Registration</title>
+
+<style>
+/* ===== Global ===== */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #e9f0ff, #f8fbff);
+    margin: 0;
+    padding: 40px;
+}
+
+/* ===== Form Card ===== */
+.form {
+    width: 480px;
+    background: #ffffff;
+    padding: 25px 30px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.form h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.form h3 {
+    margin-top: 25px;
+    color: #34495e;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/* ===== Labels & Inputs ===== */
+label {
+    font-weight: 600;
+    display: block;
+    margin-top: 15px;
+    color: #333;
+}
+
+input, select {
+    width: 100%;
+    padding: 9px 10px;
+    margin-top: 6px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #4f7cff;
+    box-shadow: 0 0 5px rgba(79, 124, 255, 0.3);
+}
+
+/* ===== Radio & Checkbox ===== */
+.options {
+    display: flex;
+    gap: 15px;
+    margin-top: 8px;
+}
+
+.options input {
+    width: auto;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-top: 10px;
+}
+
+/* ===== Error & Success ===== */
+span {
+    font-size: 12px;
+    color: red;
+}
+
+input.error, select.error {
+    border: 2px solid #e74c3c;
+}
+
+input.success, select.success {
+    border: 2px solid #2ecc71;
+}
+
+
+.terms {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    background: linear-gradient(135deg, #4f7cff, #3a5cff);
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #3a5cff, #2f4de0);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 520px) {
+    .form {
+        width: 95%;
+        padding: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<form onsubmit="return Formvalidate()" class="form">
+
+    <h2>Job Portal Registration</h2>
+
+    <h3>Personal Information</h3>
+
+    <label>Full Name</label>
+    <input type="text" id="full-name">
+    <span id="nameErr"></span>
+
+    <label>Date of Birth</label>
+    <input type="date" id="date-of-birth">
+    <span id="dobErr"></span>
+
+    <label>Gender</label>
+    <div class="options">
+        <label><input type="radio" name="gender"> Male</label>
+        <label><input type="radio" name="gender"> Female</label>
+    </div>
+    <span id="genderErr"></span>
+
+    <h3>Account Details</h3>
+
+    <label>Email</label>
+    <input type="text" id="email">
+    <span id="emailErr"></span>
+
+    <label>Username</label>
+    <input type="text" id="username">
+    <span id="userErr"></span>
+
+    <label>Password</label>
+    <input type="password" id="password">
+    <span id="passErr"></span>
+
+    <label>Confirm Password</label>
+    <input type="password" id="confirm-password">
+    <span id="confirmErr"></span>
+
+    <h3>Contact Information</h3>
+
+    <label>Mobile Number</label>
+    <input type="text" id="mobile">
+    <span id="mobileErr"></span>
+
+    <label>Country</label>
+    <select id="country">
+        <option value="">Select</option>
+        <option>India</option>
+        <option>USA</option>
+        <option>UK</option>
+    </select>
+    <span id="countryErr"></span>
+
+    <label>Experience Level</label>
+    <select id="experience">
+        <option value="">Select</option>
+        <option>Fresher</option>
+        <option>Entry</option>
+        <option>Mid</option>
+        <option>Senior</option>
+    </select>
+    <span id="expErr"></span>
+
+    <h3>Skills & Preferences</h3>
+
+    <div class="skills">
+        <label><input type="checkbox" name="skill"> JavaScript</label>
+        <label><input type="checkbox" name="skill"> Python</label>
+        <label><input type="checkbox" name="skill"> Java</label>
+        <label><input type="checkbox" name="skill"> MySQL</label>
+    </div>
+    <span id="skillErr"></span>
+
+    <label>Expected Salary</label>
+    <input type="number" id="salary">
+    <span id="salaryErr"></span>
+
+    <div class="terms">
+        <input type="checkbox" id="terms">
+        <label>I agree to the Terms & Conditions</label>
+    </div>
+    <span id="termsErr"></span>
+
+    <button type="submit">Register</button>
+</form>
+
+<script src="FormvelidationPrecties.js"></script>
+</body>
+</html>
