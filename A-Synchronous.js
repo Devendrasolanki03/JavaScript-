@@ -104,8 +104,49 @@
 //         console.log("error:", error);
 //     });
 
+// async  06
+// async function hello() {
+//     console.log("heloooooooooo")
+
+// }
+// console.log(hello())
 
 
+//07
+// function getApp() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("getting data");
+//             resolve(200);
+//         }, 2000);
+//     });
+// }
+// async function getData() {
+//     await getApp();
+//     await getApp();
+// }
+// getData();
+
+
+
+//08
+function getApp(id) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log(" data ",id);
+            resolve("scucess");
+        }, 2000);
+    });
+}
+async function getData() {
+    console.log("geting data 1")
+    await getApp(1);
+     console.log("geting data 2")
+    await getApp(2);
+    console.log("getting data 3 ")
+    await getApp(3);
+}
+getData();
 
 
 
