@@ -487,11 +487,11 @@
 
 
 
-const user = {
-    name: "Devendra",
-    role: "Java Developer",
-    experience: 1
-};
+// const user = {
+//     name: "Devendra",
+//     role: "Java Developer",
+//     experience: 1
+// };
 
 // console.log(Object.keys(user)); // it will return array of keys
 // console.log(Object.values(user)); // it will return array of values
@@ -638,3 +638,65 @@ const user = {
 // 2 when behavious of object is deffrent 
 // this keyword are used of 
 // no acces are to instanc method 
+
+
+// function prototype is an object in js from which all function inherit comman method and properties 
+// 🔸 What is call()?
+
+// The call() method is used to invoke a function immediately and explicitly set the value of this for that function.
+// aregument are passed one by one and in this method unlimeted aregument are allowed 
+// let person ={
+//     name : "dev"
+// }
+// function showname(city){
+//     console.log(this.name + " from   "+city)
+// }
+// showname.call(person,"indore")
+
+//02
+// const atm = {
+//     withdraw(amount) {
+//         console.log(`${this.name} withdrew ₹${amount}`);
+//     }
+// };
+
+// const user1 = { name: "Dev" };
+// const user2 = { name: "Raj" };
+
+// atm.withdraw.call(user1, 1000);
+// atm.withdraw.call(user2, 100);
+
+// apply
+
+// 🔹 What is apply()?
+
+// apply() is used to call a function immediately and explicitly set the value of `this`,
+// just like call(). The arguments are passed as an array.
+// let person = {
+//     name: "anushka"
+// };
+
+// function showname(city, country) {
+//     console.log(this.name + " from " + city + ", " + country);
+// }
+// showname.apply(person, ["Indore", "India"]);
+
+// apply() invokes a function immediately, explicitly binds `this`,
+// and accepts arguments as an array.
+
+// bind() does not invoke the function immediately.
+// It returns a new function with a permanently bound `this` value.
+// In this method, `this` does not get lost.
+function teach(subject) {
+    console.log(this.name + " padhate hai " + subject);
+}
+
+let teacher = { name: "Ajay Sir" };
+
+setTimeout(teach, 1000);
+
+let bindbound = teach.bind(teacher, "Java");
+setTimeout(bindbound, 1000);
+
+// tostring
+// hasownpropertiy
