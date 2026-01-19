@@ -582,3 +582,59 @@ const user = {
 // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // const lastEvenIndex = numbers.findLastIndex(num => num % 2 === 0);
 // console.log(lastEvenIndex); // 9 
+
+// static and non static method in class
+// console.log("hello world ");
+// static method 
+// class Demo {
+//     static show() {
+//         console.log("staic method");
+//     }
+
+// }
+// Demo.show();
+
+// non static method
+// class Person{
+//     constructor(name){
+//         this.name=name;
+//     }
+//     greet(){
+//         console.log("hyy",this.name);
+//     }
+// }
+// let p = new Person("dev");
+// p.greet()
+
+// static
+
+// class Mathutil {
+//     static add(a,b){
+//         return a+b;
+//     }
+// }
+// console.log(Mathutil.add(10,20));
+
+
+//05
+
+// class calculator{
+//     static add(a,b){
+//         return a+b;
+//     }
+
+//     static substreact(a,b){
+//         return a-b;
+//     }
+
+// }
+// console.log(calculator.add(10,20));
+// console.log(calculator.substreact(60,50))
+
+// static method are function that are defind on a class  but not are accesable throw instances of a class insted of they colled direclty class it sell
+// this method are use full for creating util or function or shared logic does not depend indivical instans 
+// non static - a non static are method that bilong to an object of a class it is colled using the object not class uses of non static methood 
+// 1 we method use object data
+// 2 when behavious of object is deffrent 
+// this keyword are used of 
+// no acces are to instanc method 
